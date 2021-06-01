@@ -13,8 +13,6 @@ public class Booking {
 
     public static void main(String[] args) {
         HotelTarget hotel = new HotelAdapter(new BaliHotel());
-        hotel.printAvailableRooms();
-        hotel.bookByRoomNumber(104);
     }
 }
 

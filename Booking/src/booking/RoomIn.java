@@ -12,6 +12,8 @@ package booking;
 public interface RoomIn {
     
     void options();
-    int getRoomNumber();
+    void date(int day);
+    void price();
+    void pro();
     
 }

@@ -16,12 +16,7 @@ public class HotelAdapter implements HotelTarget {
     public HotelAdapter(BaliHotel hotel) {
         this.hotel = hotel;
     }
-    @Override
-    public void printAvailableRooms() {
-        List allAvailableRooms = hotel.getAllAvailableRooms();
-        System.out.println("Rooms Available:");
 
-    }
     @Override
     public void bookByRoomNumber(int roomNumber) {
         hotel.bookRoom(roomNumber);

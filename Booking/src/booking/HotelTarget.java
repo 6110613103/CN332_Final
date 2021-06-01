@@ -12,7 +12,6 @@ package booking;
  */
 public interface HotelTarget {
     
-    void printAvailableRooms();
     
     void bookByRoomNumber(int roomNumber);
 }

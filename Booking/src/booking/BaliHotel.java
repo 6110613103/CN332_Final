@@ -9,30 +9,33 @@ package booking;
  *
  * @author noeyyeon
  */
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.Scanner;
 
 public class BaliHotel {
-    public List availableRooms = new ArrayList<>();
+    int no;
 
     public BaliHotel() {
-        
-        availableRooms.add(new Room(104));
-        availableRooms.add(new Room(210));
-        availableRooms.add(new Room(307));
-        availableRooms.add(new Room(400));
+        System.out.print("Room No. : ");
+        Scanner sn = new Scanner(System.in);
+        String n = sn.next();
+        no = Integer.parseInt(n);
+        System.out.println("Your Room is " + no);
+        Room bookedRoom = new Room(no);
+ 
     }
-    public List getAllAvailableRooms() {
-        return availableRooms;
-    }
+
     public void bookRoom(int roomNumber) {
-        Room bookedRoom = new Room(104);
-                
-        if(bookedRoom != null){
-            availableRooms.remove(bookedRoom);
-            System.out.println("Room " + roomNumber + " has been booked.");
-        }else{
-            System.out.println("Requested room was not available.");
-        }
+        System.out.println("Select Pay");
+        System.out.println("1. Cash");
+        System.out.println("2. Credit");
+        
+        Scanner sn = new Scanner(System.in);
+        String n = sn.next();
+        int p = Integer.parseInt(n);
+        if(p == 1){
+            pay count = new pay(p);
+            }
+        else{pay count = new pay(p);}
     }
 }
